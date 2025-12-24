@@ -1,120 +1,81 @@
-# 📚 Book API
+<div align="center">
+<a href="https://github.com/fahmirizalbudi/bookage" target="blank">
+<img src="https://raw.githubusercontent.com/JjagoKoding/icon/4353b8c801d51cfad7d30805cf02404259928fcb/bookage.svg" width="300" alt="Logo" />
+</a>
 
-Book API is a simple RESTful API built with Golang and Gin, used to manage data for books, and categories.
+<br />
+<br />
 
----
+![](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![](https://img.shields.io/badge/Gin-00A393?style=for-the-badge&logo=gin&logoColor=white)
+![](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
-## 🚀 Feature
+</div>
 
-- CRUD operations for Books, and Categories
-- Input validation  
-- Connection to PostgreSQL  
-- Structured JSON responses  
-- Middleware for basic authentication  
+<br/>
 
----
+## 📚 Bookage
 
-## 🛠️ Tech Stack
+Bookage is a basic API service for library and book management operations. Built in Go and Gin Web Framework, this project was created to learn. This project uses PostgreSQL as the database. Key features include:
 
-- [Go (Golang)](https://golang.org/)
-- [Gin Gonic](https://github.com/gin-gonic/gin)
-- PostgreSQL
-- godotenv
+## ✨ Features
 
----
+- **🔒 Basic Authentication:** Provides basic authentication middleware.
+- **🏷️ Categories Management:** Create, view, update, and delete categories; manage categories easily.
+- **📖 Books Management:** Create, view, update, and delete books; manage library inventory easily.
 
-## ⚙️ Instalation
+## 👩‍💻 Tech Stack
 
-1. Clone repository:
+- **Go**: A statically typed programming language designed for building scalable and high-performance server-side applications.
+- **Gin**: A high-performance web framework for Go, designed for building RESTful APIs and web applications.
+- **PostgreSQL**: A powerful, open-source relational database system for storing and managing structured data.
+
+## 📦 Getting Started
+
+To get a local copy of this project up and running, follow these steps.
+
+### 🚀 Prerequisites
+
+- **Go** (v1.24.x or higher).
+- **PostgreSQL** (or another supported SQL database).
+
+## 🛠️ Installation
+
+1. **Clone the repository:**
+
    ```bash
-   git clone https://github.com/username/book-api.git
-   cd book-api
+   git clone https://github.com/fahmirizalbudi/bookage.git
+   cd bookage
    ```
 
-3. Install dependency:
+2. **Install dependencies:**
+
    ```bash
    go mod tidy
    ```
 
-4. Run API:
+3. **Start the development server:**
+
    ```bash
    go run main.go
    ```
 
----
+## 📖 Usage
 
-## 📘 Api EndPoint
-### 📚 Book
+### ✔ Running the Website
 
-| Method | Endpoint                    | Description               |
-|--------|-----------------------------|-------------------------|
-| GET    | `/api/books`                | Retrieve all book       |
-| GET    | `/api/books/:id`            | Retrieve book by ID     |
-| POST   | `/api/books`                | Add a new book          |
-| PUT    | `/api/books/:id`            | Update a book by ID     |
-| DELETE | `/api/books/:id`            | Delete a book by ID     |
+- **Development mode:** `go run main.go`.
+- **Production mode:** `go build main.go && ./main`.
 
-Example JSON Body:
-```json
-{
-    "title": "Learn Math",
-    "description": "Easy learn math.",
-    "image_url": "https://example.com/image.jpg",
-    "release_year": 2023,
-    "price": 100000,
-    "total_page": 3000,
-    "category_id": 4
-}
-```
+> Use [http://localhost:8080](http://localhost:8080) to test the api in your Postman.
 
----
+### 📃 API Documentation
 
-### 🗂️ Category
+> [!NOTE]
+> **Coming Soon**
+>
+> The API documentation is currently under development. We are working on detailing all endpoints and usage examples. Please check back later!
 
-| Method | Endpoint                    | Description               |
-|--------|-----------------------------|-------------------------|
-| GET    | `/api/categories`           | Retrieve all category   |
-| GET    | `/api/categories/:id`       | Retrieve category by ID |
-| POST   | `/api/categories`           | Add a new category      |
-| PUT    | `/api/categories/:id`       | Update a category by ID |
-| DELETE | `/api/categories/:id`       | Delete a category by ID |
-| GET | `/api/categories/:id/books`       | Retrieve book by category ID |
+## 📜 License
 
-Example JSON Body:
-```json
-{
-    "name": "Myth"
-}
-```
-
----
-
-## 🔐 Basic Auth
-
-Use **Basic Authentication** in header:
-
-```http
-Authorization: Basic base64(username:password)
-```
-**Default credentials (for testing):**
-- username: `root`
-- password: `root`
-
----
-
-## 🗂 Directory Structure
-
-```
-├── handlers/
-├── middlewares/
-├── db/
-├── routers/
-├── repositories/
-└── structs/
-```
-
----
-
-## 📚 Purpose
-
-This project was created as part of the quiz submission for the Sanbercode Golang Backend program.
+All rights reserved. This project is for educational purposes only and cannot be used or distributed without permission.
